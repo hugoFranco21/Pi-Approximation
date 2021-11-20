@@ -35,3 +35,4 @@
 *.txt
 create_tar.sh
 
+.vscode/
