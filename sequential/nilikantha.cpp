@@ -49,6 +49,6 @@ int main(int argc, char *argv[]) {
         time += stop_timer();
     }
     cout << "Pi is approx: " << setprecision(15) << nik.getResult() << endl;
-    cout << "Time elapsed: " << setprecision(15) << (time / N) << " ms" << endl;
+    cout << "Average time elapsed: " << setprecision(15) << (time / N) << " ms" << endl;
     return 0;
 }

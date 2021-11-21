@@ -33,6 +33,6 @@ int main(int argc, char * argv[]){
 		time += stop_timer();
 	}
     printf("Pi is approx: %.15lf \n", result);
-    printf("Time elapsed: %.7lf ms\n", (time / N));
+    printf("Average time elapsed: %.7lf ms\n", (time / N));
     return 0;
 }
