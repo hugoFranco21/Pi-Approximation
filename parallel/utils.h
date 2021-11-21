@@ -27,7 +27,10 @@
 #include <sys/time.h>
 #include <sys/types.h>
 
-#define N 10
+#define MMIN(a,b) (((a)<(b))?(a):(b))
+#define MMAX(a,b) (((a)>(b))?(a):(b))
+
+#define N 				10
 
 struct timeval startTime, stopTime;
 int started = 0;

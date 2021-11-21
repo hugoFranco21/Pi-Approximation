@@ -1,8 +1,21 @@
+/*----------------------------------------------------------------
+* Multiprocesadores: Proyecto final
+* Fecha: 21-Nov-2021
+* Autor: A01654856 Hugo David Franco Ávila
+* Descripción: Este código implementa la serie de Nilikantha para
+    obtener una aproximación suficientemente precisa de Pi en el lenguaje C++. A medida
+    que incrementan los términos de la serie, la aproximación es más precisa.
+    El algoritmo está de forma secuencial.
+    Hago uso del archivo utils.h generado por el Prof. Pedro Pérez
+* Comando para compilar en Linux: g++ nilikantha.cpp
+* Comando para correr en Linux: ./a.out
+* NOTA: De especificar otro nombre del ejecutable al compilar utilizar ./nombreDelEjecutable.out
+*--------------------------------------------------------------*/
 #include <iostream>
 #include <iomanip>
 #include "utils.h"
 
-#define SIZE 1000000000
+#define SIZE 1000000000 //1e9
 
 using namespace std;
 
@@ -13,12 +26,27 @@ private:
     double result;
 
 public:
+    /**
+     * @brief Construct a new Nilikantha object
+     * 
+     * @param s int
+     */
     Nilikantha(int s) : size(s) {}
 
+    /**
+     * @brief Get the result value from the Nilikantha object
+     * 
+     * @return double 
+     */
     double getResult() {
         return this->result;
     }
 
+    /**
+     * @brief This function does the calculation of the Nilikantha series up to the size defined
+     * in the object constructor.
+     * 
+     */
     void calculate() {
         result = 3.0;
         double sign, di, denominator, term;
@@ -36,10 +64,11 @@ public:
 int main(int argc, char *argv[]) {
     int size = SIZE, i = 0;
     double result = 0.0, time = 0.0;
-    if (argc > 2) {
-        cout << "No arguments are allowed" << endl;
+    if (argc >= 2) {
+        cout << "Error: No arguments are allowed" << endl;
         return -1;
     }
+    cout << "Starting..." << endl;
     Nilikantha nik(size);
     for (i = 0; i < N; i++) {
         start_timer();
