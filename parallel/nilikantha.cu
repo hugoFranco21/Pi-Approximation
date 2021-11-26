@@ -37,7 +37,7 @@ __global__ void nilik(double *result) {
 	__shared__ double cache[THREADS];
 
 	/**
-	 * The tid is a linealization of the memory in the GPU, and will be used
+	 * The tid is a linearization of the memory in the GPU, and will be used
 	 * for the calculation as the nth term
 	 */
 	int tid = threadIdx.x + (blockIdx.x * blockDim.x);

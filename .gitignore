@@ -34,5 +34,5 @@
 *.class
 *.txt
 create_tar.sh
-
+*.tar.gz
 .vscode/
